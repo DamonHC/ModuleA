@@ -7,7 +7,7 @@
 //
 
 #import "AViewController.h"
-//#import "BViewController.h"
+#import <CTMediator+ModuleB.h>
 #import <HandyFrame/UIView+LayoutMethods.h>
 
 @interface AViewController ()
@@ -24,6 +24,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.pushBViewControllerButton];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
 }
 
 - (void)viewWillLayoutSubviews
@@ -37,8 +39,8 @@
 #pragma mark - event response
 - (void)didTappedPushBViewControllerButton:(UIButton *)button
 {
-//    BViewController *viewController = [[BViewController alloc] initWithContentText:@"hello, world!"];
-//    [self.navigationController pushViewController:viewController animated:YES];
+    UIViewController *viewController = [[CTMediator sharedInstance] moduleB_bViewControllerWithText:@"Hello World"];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - getters and setters
