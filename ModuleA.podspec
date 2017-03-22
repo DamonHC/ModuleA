@@ -138,4 +138,6 @@ Pod::Spec.new do |s|
   # s.dependency "BLMediator"
   s.dependency "CTMediator"
   s.dependency "HandyFrame"
+  s.dependency "ModuleB"
+
 end
