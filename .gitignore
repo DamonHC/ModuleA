@@ -1,6 +1,5 @@
 ModuleA.xcodeproj/xcuserdata/
 ModuleA.xcworkspace/
-Pods/
 *.swp
 Podfile.lock
 .DS_Store
