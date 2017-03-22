@@ -7,7 +7,7 @@
 //
 
 #import "AViewController.h"
-#import <CTMediator+ModuleB.h>
+#import <ModuleB/CTMediator+ModuleB.h>
 #import <HandyFrame/UIView+LayoutMethods.h>
 
 @interface AViewController ()
