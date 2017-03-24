@@ -50,8 +50,10 @@ echo "editing..."
 sed -i "" "s%s.version .*%s.version       = \"${tag}\"%g" "$specFilePath"
 echo "edit finished"
 
+echo "adding tag..."
 git add .
 git commit -m "${tag}"
 git tag ${tag}
 git push origin master --tags
+echo "finished adding tag"
 
